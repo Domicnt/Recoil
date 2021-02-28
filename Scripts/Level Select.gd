@@ -9,9 +9,11 @@ func _ready():
 	for i in levels.size():
 		get_node(str(levels[i].get_path()) + "/MarginContainer/Start").connect("pressed", self, "_on_level_select", [i]);
 		levels[i].visible = i <= Global.stage;
+		get_node(str(levels[i].get_path()) + "/MarginContainer/VBoxContainer/RichTextLabel2").bbcode_text = "[center]Time: " + str(float(Global.stage_times[i]) / 1000) + "s[/center]";
 
 func _on_level_select(i):
 	if (i <= Global.stage):
+		Global.current_stage = i;
 		Global.goto_scene("res://Scenes/Levels/" + str(i+1) + ".tscn");
 
 func _on_Back_pressed():

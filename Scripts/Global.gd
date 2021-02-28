@@ -28,8 +28,9 @@ func set_display_mode(mode):
 	config.set_value("display", "mode", mode);
 	config.save("user://settings.cfg");
 
-var stage = 1;
+var stage = 0;
 var stage_times = [0];
+var current_stage = -1;
 
 var save = File.new();
 func save_file(file):
@@ -45,12 +46,14 @@ func load_file(file):
 		stage = save.get_value("stage");
 		stage_times = save.get_value("stage_times");
 
-func get_stage_time(stage):
-	return stage_times[stage - 1];
-func set_stage_time(stage, time):
-	while stage_times.size() < stage:
-		stage_times.push_back(null);
-	stage_times[stage - 1] = time;
+func get_stage_time(Stage):
+	return stage_times[Stage];
+func set_stage_time(Stage, time):
+	while stage_times.size() < Stage:
+		stage_times.push_back(-1);
+	if stage < Stage:
+		stage = Stage;
+	stage_times[Stage] = time;
 
 func _ready():
 	var root = get_tree().get_root();

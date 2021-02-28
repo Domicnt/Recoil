@@ -23,7 +23,7 @@ scale = 7.5
 scale_random = 1.0
 color = Color( 0.847059, 0.847059, 0.847059, 1 )
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D"]
 gravity_scale = 9.8
 script = ExtResource( 3 )
 
