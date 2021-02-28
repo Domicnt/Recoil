@@ -1,6 +1,6 @@
 extends Control
 
-onready var levels_node = get_node("MarginContainer/HBoxContainer");
+onready var levels_node = get_node("MarginContainer/ScrollContainer/HBoxContainer");
 var levels = Array();
 
 func _ready():
@@ -9,7 +9,9 @@ func _ready():
 	for i in levels.size():
 		get_node(str(levels[i].get_path()) + "/MarginContainer/Start").connect("pressed", self, "_on_level_select", [i]);
 		levels[i].visible = i <= Global.stage;
-		get_node(str(levels[i].get_path()) + "/MarginContainer/VBoxContainer/RichTextLabel2").bbcode_text = "[center]Time: " + str(float(Global.stage_times[i]) / 1000) + "s[/center]";
+		get_node(str(levels[i].get_path()) + "/MarginContainer/VBoxContainer/RichTextLabel").bbcode_text = "[center]Level " + str(i + 1);
+		if Global.stage_times.size() >= i + 1:
+			get_node(str(levels[i].get_path()) + "/MarginContainer/VBoxContainer/RichTextLabel2").bbcode_text = "[center]Time: " + str(float(Global.stage_times[i]) / 1000) + "s[/center]";
 
 func _on_level_select(i):
 	if (i <= Global.stage):

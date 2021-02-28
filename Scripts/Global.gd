@@ -29,7 +29,7 @@ func set_display_mode(mode):
 	config.save("user://settings.cfg");
 
 var stage = 0;
-var stage_times = [0];
+var stage_times = Array();
 var current_stage = -1;
 
 var save = File.new();
@@ -49,10 +49,10 @@ func load_file(file):
 func get_stage_time(Stage):
 	return stage_times[Stage];
 func set_stage_time(Stage, time):
-	while stage_times.size() < Stage:
-		stage_times.push_back(-1);
-	if stage < Stage:
-		stage = Stage;
+	while stage_times.size() <= Stage:
+		stage_times.push_back(0);
+	if stage <= Stage:
+		stage = Stage + 1;
 	stage_times[Stage] = time;
 
 func _ready():

@@ -2,7 +2,7 @@ extends Node2D
 
 const Projectile = preload("res://Scenes/Instances/Turret_Projectile.tscn");
 
-onready var player = get_node("../../Player");
+onready var player = get_node("../Player");
 
 onready var time = OS.get_ticks_msec();
 
