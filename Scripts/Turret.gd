@@ -23,4 +23,5 @@ func shoot():
 	projectile.global_position = self.global_position + projectile.vel * 3;
 
 func _on_Area2D_area_entered(area):
-	self.queue_free();
+	if !("Turret" in area.get_name()):
+		self.queue_free();

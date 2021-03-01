@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Levels/1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Instances/Target.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+
+[node name="Flag" parent="." index="1"]
+position = Vector2( -23.5712, 225.615 )
+
+[node name="Target" parent="Flag" index="2" instance=ExtResource( 2 )]
+position = Vector2( 236.839, -246.942 )
+
+[node name="Target2" parent="Flag" index="3" instance=ExtResource( 2 )]
+position = Vector2( 231.227, 191.941 )
+
+[node name="Target3" parent="Flag" index="4" instance=ExtResource( 2 )]
+position = Vector2( -204.288, 197.553 )
+
+[node name="Target4" parent="Flag" index="5" instance=ExtResource( 2 )]
+position = Vector2( -40.4087, -212.145 )
+
+[node name="TileMap" parent="." index="2"]
+tile_data = PoolIntArray( -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -65539, 0, 0, -131066, 0, 0, -3, 0, 0, -65530, 0, 0, 65533, 0, 0, 6, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65542, 0, 0, 196601, 0, 0, 131074, 0, 0, 131078, 0, 0, 262137, 0, 0, 196610, 0, 0, 196614, 0, 0, 327673, 0, 0, 262146, 0, 0, 262150, 0, 0, 393209, 0, 0, 327682, 0, 0, 327686, 0, 0, 458745, 0, 0, 458749, 0, 0, 458750, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393222, 0, 0, 524281, 0, 0, 458758, 0, 0, 589817, 0, 0, 524294, 0, 0, 655353, 0, 0, 589830, 0, 0, 720889, 0, 0, 720890, 0, 0, 720891, 0, 0, 720892, 0, 0, 720893, 0, 0, 720894, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0 )
+
+[node name="1" parent="CanvasLayer" index="0"]
+visible = false

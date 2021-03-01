@@ -23,3 +23,6 @@ position = Vector2( -119.364, 191.905 )
 
 [node name="Node2D4" parent="." index="5" instance=ExtResource( 2 )]
 position = Vector2( -168.808, 240.6 )
+
+[node name="1" parent="CanvasLayer" index="0"]
+visible = false

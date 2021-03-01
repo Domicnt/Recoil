@@ -1,7 +1,7 @@
 extends Control
 
 func _input(event):
-	if event.is_action_pressed("menu_toggle"):
+	if event.is_action_pressed("menu_toggle") && visible == get_tree().paused:
 		visible = !visible;
 		get_tree().paused = !get_tree().paused;
 
