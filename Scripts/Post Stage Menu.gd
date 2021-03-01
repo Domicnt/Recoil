@@ -2,8 +2,12 @@ extends Control
 
 onready var time = get_node("MarginContainer/MarginContainer/VBoxContainer/RichTextLabel");
 
+func _ready():
+	if Global.current_stage >= 19:
+		$MarginContainer/MarginContainer/VBoxContainer/Continue.visible = false;
+
 func _physics_process(delta):
-	time.bbcode_text = "Time: " + str(float(Global.time) / 1000) + "s";
+	time.bbcode_text = "[center]Time: " + str(float(Global.time) / 1000) + "s";
 
 func _on_Continue_pressed():
 	get_tree().paused = false;

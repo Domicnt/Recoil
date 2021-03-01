@@ -28,7 +28,7 @@ func set_display_mode(mode):
 	config.set_value("display", "mode", mode);
 	config.save("user://settings.cfg");
 
-var stage = 20;
+var stage = 0;
 var stage_times = Array();
 var current_stage = -1;
 var time = 0;

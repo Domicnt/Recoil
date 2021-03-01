@@ -6,6 +6,10 @@
 [node name="Post Stage Menu" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
 
+[node name="MarginContainer" parent="MarginContainer" index="1"]
+margin_top = 20.0
+margin_bottom = 420.0
+
 [node name="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" index="0"]
 bbcode_text = "[center]Time: x"
 text = "Time: x"
