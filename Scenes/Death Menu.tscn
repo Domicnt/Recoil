@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Death Menu.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Pause Menu.tscn" type="PackedScene" id=2]
+
+[node name="Death Menu" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" index="0"]
+margin_top = 73.0
+margin_bottom = 223.0
+bbcode_text = "[center]You Died!"
+text = "You Died!"
+
+[node name="Continue" parent="MarginContainer/MarginContainer/VBoxContainer" index="1"]
+visible = false
+
+[node name="Restart" parent="MarginContainer/MarginContainer/VBoxContainer" index="2"]
+margin_top = 227.0
+margin_bottom = 275.0
+
+[node name="Exit" parent="MarginContainer/MarginContainer/VBoxContainer" index="3"]
+margin_top = 279.0
+margin_bottom = 327.0

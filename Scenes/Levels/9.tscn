@@ -6,19 +6,18 @@
 
 [node name="Node2D" instance=ExtResource( 3 )]
 
-[node name="Node2D" parent="." index="1"]
-position = Vector2( 4.01595, -899.722 )
+[node name="Flag" parent="." index="1"]
+position = Vector2( 5.53397, -899.572 )
 rotation = 3.14159
-scale = Vector2( -1, 1 )
 
-[node name="Target" parent="Node2D" index="2" instance=ExtResource( 1 )]
-position = Vector2( -3.96844, -711.156 )
+[node name="Target" parent="Flag" index="2" instance=ExtResource( 1 )]
+position = Vector2( 9.34392, -189.547 )
 
-[node name="Target2" parent="Node2D" index="3" instance=ExtResource( 1 )]
-position = Vector2( -2.96846, -472.156 )
+[node name="Target2" parent="Flag" index="3" instance=ExtResource( 1 )]
+position = Vector2( 9.34389, -432.488 )
 
-[node name="Target3" parent="Node2D" index="4" instance=ExtResource( 1 )]
-position = Vector2( -4.96848, -260.156 )
+[node name="Target3" parent="Flag" index="4" instance=ExtResource( 1 )]
+position = Vector2( 8.00903, -682.103 )
 
 [node name="TileMap" parent="." index="2"]
 tile_data = PoolIntArray( -1310723, 0, 0, -1310722, 0, 0, -1310721, 0, 0, -1376256, 0, 0, -1376255, 0, 0, -1376254, 0, 0, -1245187, 0, 0, -1310718, 0, 0, -1179651, 0, 0, -1245182, 0, 0, -1114116, 0, 0, -1114115, 0, 0, -1179646, 0, 0, -1179645, 0, 0, -1048580, 0, 0, -1114109, 0, 0, -983044, 0, 0, -983043, 0, 0, -1048574, 0, 0, -1048573, 0, 0, -917507, 0, 0, -983038, 0, 0, -851971, 0, 0, -917502, 0, 0, -786435, 0, 0, -851966, 0, 0, -720899, 0, 0, -786430, 0, 0, -655363, 0, 0, -720894, 0, 0, -589827, 0, 0, -655358, 0, 0, -524292, 0, 0, -524291, 0, 0, -589822, 0, 0, -589821, 0, 0, -458756, 0, 0, -524285, 0, 0, -393220, 0, 0, -393219, 0, 0, -458750, 0, 0, -458749, 0, 0, -327683, 0, 0, -393214, 0, 0, -262147, 0, 0, -327678, 0, 0, -196611, 0, 0, -262142, 0, 0, -131075, 0, 0, -196606, 0, 0, -65539, 0, 0, -131070, 0, 0, -3, 0, 0, -65534, 0, 0, 65533, 0, 0, 2, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0 )

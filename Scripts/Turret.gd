@@ -17,6 +17,10 @@ func _physics_process(delta):
 
 func shoot():
 	var projectile = Projectile.instance();
+	projectile.add_to_group("Projectiles");
 	Global.add_child(projectile);
 	projectile.vel = Vector2(cos($Sprite2.rotation - PI/2), sin($Sprite2.rotation - PI/2)) * 10;
 	projectile.global_position = self.global_position + projectile.vel * 3;
+
+func _on_Area2D_area_entered(area):
+	self.queue_free();

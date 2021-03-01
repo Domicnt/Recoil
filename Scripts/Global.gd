@@ -28,9 +28,10 @@ func set_display_mode(mode):
 	config.set_value("display", "mode", mode);
 	config.save("user://settings.cfg");
 
-var stage = 0;
+var stage = 20;
 var stage_times = Array();
 var current_stage = -1;
+var time = 0;
 
 var save = File.new();
 func save_file(file):
@@ -68,6 +69,9 @@ func _ready():
 	config.save("user://settings.cfg");
 
 func goto_scene(path):
+	var projectiles = get_tree().get_nodes_in_group("Projectiles");
+	for i in projectiles: 
+		i.queue_free()
 	call_deferred("_deferred_goto_scene", path);
 
 func _deferred_goto_scene(path):
